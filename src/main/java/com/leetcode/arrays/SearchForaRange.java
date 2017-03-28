@@ -8,49 +8,39 @@ import org.junit.Test;
 public class SearchForaRange {
 
     @Test
-    public void test(){
-        int[] ret = searchRange(new int[]{2, 2}, 1);
+    public void test() {
+        int[] ret = searchRange(new int[]{}, 2);
         System.out.println(ret[0]);
         System.out.println(ret[1]);
     }
 
-    public int[] searchRange(int[] nums, int target){
-        if(nums.length < 1)
+    public int[] searchRange(int[] nums, int target) {
+        if(nums == null || nums.length == 0)
             return new int[]{-1, -1};
-        int[] result = new int[2];
-        result[0] = lSearch(nums, target);
-        result[1] = rSearch(nums, target);
-        return result;
-    }
+        int i = 0, j = nums.length - 1;
+        int[] ret = new int[]{-1, -1};
 
-    public int lSearch(int[] nums, int target){
-        int left = 0;
-        int right = nums.length - 1;
-        while(left <= right){
-            int mid = (left + right) / 2;
-            if(nums[mid] < target)
-                left = mid + 1;
+        while (i < j) {
+            int mid = (i + j) / 2;
+            if (nums[mid] < target)
+                i = mid + 1;
             else
-                right = mid -1;
+                j = mid;
         }
-        if(nums[left] != target)
-            return -1;
-        return left;
-    }
+        if (nums[i] != target)
+            return ret;
+        else
+            ret[0] = i;
 
-    public int rSearch(int[] nums, int target){
-        int left = 0;
-        int right = nums.length - 1;
-        while(left <= right){
-            int mid = (left + right) / 2;
-            if(nums[mid] > target)
-                right = mid - 1;
+        j = nums.length - 1;
+        while (i < j) {
+            int mid = (i + j) / 2 + 1;
+            if (nums[mid] > target)
+                j = mid - 1;
             else
-                left = mid + 1;
+                i = mid;
         }
-        if(nums[right] != target)
-            return -1;
-        return right;
+        ret[1] = j;
+        return ret;
     }
-
 }
