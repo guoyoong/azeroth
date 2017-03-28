@@ -9,7 +9,7 @@ public class NextPermutation {
 
     @Test
     public void test() {
-        int[] nums = new int[]{1, 3, 2};
+        int[] nums = new int[]{1, 2, 3, 7, 6, 5, 4};
         nextPermutation(nums);
         for (int i = 0; i < nums.length; i++) {
             System.out.println(nums[i]);
@@ -28,7 +28,7 @@ public class NextPermutation {
         if (index == 0) {
             reverseSort(nums, 0, nums.length - 1);
             return;
-        }else{// 1, 2, 3, 4, 5 --》 1, 5, 4, 3, 2,
+        }else{// 1, 2, 7, 6, 5, 4 --》 1, 2, 4, 3, 5, 6, 7
             int val = nums[index - 1];
             int j = nums.length - 1;
             while(j >= index){
@@ -45,7 +45,7 @@ public class NextPermutation {
     public void reverseSort(int[] nums, int start, int end) {
         if (start > end)
             return;
-        for (int i = 0; i <= (start + end) / 2; i++)
+        for (int i = start; i <= (start + end) / 2; i++)
             swap(nums, i, start + end - i);
     }
 
