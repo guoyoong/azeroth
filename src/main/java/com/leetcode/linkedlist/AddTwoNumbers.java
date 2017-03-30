@@ -1,4 +1,4 @@
-package com.leetcode.arrays;
+package com.leetcode.linkedlist;
 
 import org.junit.Test;
 
@@ -6,14 +6,6 @@ import org.junit.Test;
  * Created by guoyong1 on 2017/3/23.
  */
 public class AddTwoNumbers {
-
-    public class ListNode{
-        int val;
-        ListNode next;
-        public ListNode(int x){
-            val = x;
-        }
-    }
 
     @Test
     public void test(){
