@@ -9,7 +9,10 @@ public class StringToInteger {
 
     @Test
     public void test() {
-        System.out.println(myAtoi("-2147483648"));
+
+//        System.out.println(myAtoi("-2147483648"));
+        System.out.println(Integer.MAX_VALUE);
+
     }
 
     public int myAtoi(String str){
