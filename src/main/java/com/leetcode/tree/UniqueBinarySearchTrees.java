@@ -1,6 +1,7 @@
 package com.leetcode.tree;
 /**
  * Created by guoyong1 on 2017/4/24.
+ * 二叉搜索树
  */
 
 import org.junit.Test;
@@ -13,7 +14,7 @@ public class UniqueBinarySearchTrees {
     }
 
     /**
-     * DP
+     * DP 分治
      * @param n
      * @return
      */
@@ -30,6 +31,7 @@ public class UniqueBinarySearchTrees {
     /**
      * 超时
      * 卡特兰数， h(n)=h(0)*h(n-1)+h(1)*h(n-2)+....+h(n-1)*h(0);
+     * 首先固定其中某一个元素，将剩下的n-1个元素拆分成两个小问题，这两个小问题的规模分别是(0,n-1) (1,n-2) (2,n-3) ... (n-1,0)
      * @param n
      * @return
      */
