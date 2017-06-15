@@ -27,12 +27,12 @@ public class SearchInRotatedSortedArray {
                 return end;
 
             if(nums[mid] < nums[end]){//右边有序
-                if(nums[mid] <target && target < nums[end])
+                if(nums[mid] < target && target <= nums[end])
                     start = mid + 1;
                 else
                     end = mid - 1;
             }else {//左边有序
-                if(nums[start] < target && target < nums[mid])
+                if(nums[start] <= target && target < nums[mid])
                     end = mid - 1;
                 else
                     start = mid + 1;
