@@ -12,7 +12,7 @@ public class NextPermutation {
         int[] nums = new int[]{1, 2, 3, 7, 6, 5, 4};
         nextPermutation(nums);
         for (int i = 0; i < nums.length; i++) {
-            System.out.println(nums[i]);
+            System.out.print(nums[i]);
         }
     }
 
@@ -28,7 +28,7 @@ public class NextPermutation {
         if (index == 0) {
             reverseSort(nums, 0, nums.length - 1);
             return;
-        }else{// 1, 2, 7, 6, 5, 4 --》 1, 2, 4, 3, 5, 6, 7
+        }else{// 1, 2, 3, 7, 6, 5, 4 --》 1, 2, 4, 3, 5, 6, 7
             int val = nums[index - 1];
             int j = nums.length - 1;
             while(j >= index){

@@ -9,7 +9,7 @@ public class ReverseInteger {
 
     @Test
     public void test() {
-        System.out.println(reverse(-2147483648));
+        System.out.println(reverse(100));
     }
 
     public int reverse(int x) {

@@ -17,7 +17,7 @@ public class ThreeSumClosest {
 
     public int threeSumClosest(int[] nums, int target) {
         Arrays.sort(nums);
-        int ans = Integer.MAX_VALUE / 2, minSum;
+        int ans = nums[0] + nums[1] + nums[nums.length - 1], minSum;
         for(int i=0; i<nums.length-2; i++){
             if(i>0 && nums[i] == nums[i-1])
                 continue;

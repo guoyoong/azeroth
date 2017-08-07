@@ -14,7 +14,7 @@ public class HappyNumber {
 
     @Test
     public void test() {
-        System.out.println(isHappy(1));
+        System.out.println(isHappy(37));
 
     }
 

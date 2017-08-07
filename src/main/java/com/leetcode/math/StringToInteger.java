@@ -30,6 +30,7 @@ public class StringToInteger {
         }
         while(i < str.length()){
             if(str.charAt(i) >= '0' && str.charAt(i) <= '9'){
+                // 超过 最大值 || 恰好等于最大值
                 if(base > Integer.MAX_VALUE / 10
                         || (base == Integer.MAX_VALUE / 10 && (str.charAt(i) - '0' > 7))){
                     if(sign == 1)
