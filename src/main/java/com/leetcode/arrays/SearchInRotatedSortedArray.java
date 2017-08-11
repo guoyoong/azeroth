@@ -26,7 +26,7 @@ public class SearchInRotatedSortedArray {
             if(nums[end] == target)
                 return end;
 
-            if(nums[mid] < nums[end]){//右边有序
+            if(nums[mid] < nums[end]){//右边有序 升降序都可能
                 if(nums[mid] < target && target <= nums[end])
                     start = mid + 1;
                 else
