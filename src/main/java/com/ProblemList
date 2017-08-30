@@ -1,11 +1,11 @@
 Median of Two Sorted Arrays
-Generate Parentheses
+**Generate Parentheses
 Reverse Nodes in k-Group
 Regular Expression Matching
 Merge k Sorted Lists
 Substring with Concatenation of All Words (最优解)
-Longest Valid Parentheses //需要用到stack
+**Longest Valid Parentheses //需要用到stack
 Longest Incresing SubS //动态规划
 Search in Rotated Sorted Array
 Search For a Range
-35//
+

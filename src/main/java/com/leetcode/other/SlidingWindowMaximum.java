@@ -1,4 +1,4 @@
-package com.leetcode;
+package com.leetcode.other;
 /**
  * Created by guoyong1 on 2017/6/15.
  */

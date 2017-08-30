@@ -12,7 +12,7 @@ public class LongestValidParentheses {
 
     @Test
     public void test() {
-
+        System.out.println(longestValidParentheses3("((()()"));
     }
 
     // stack 记录第一个括号开始位置。

@@ -1,4 +1,4 @@
-package com.leetcode;
+package com.leetcode.other;
 /**
  * Created by guoyong1 on 2017/6/19.
  */
@@ -24,7 +24,7 @@ public class ProducerConsumer {
                     try {
                         while (storeHouse.size() == MAX) {
                             System.out.println("storeHouse is full , please wait");
-                            storeHouse.wait();
+                            storeHouse.wait();//本线程休眠，直到notify释放锁以后，唤醒该线程。
                         }
                         Object newOb = new Object();
                         if (storeHouse.add(newOb)) {

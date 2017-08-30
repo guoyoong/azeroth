@@ -14,6 +14,7 @@ public class DivideTwoIntegers {
 
     public int divide(int dividend, int divisor) {
         int flag = 1;
+        // 特殊值判断
         if ((dividend > 0 && divisor < 0) || (dividend < 0 && divisor > 0)) {
             divisor = 0 - divisor;
             flag = -1;

@@ -14,7 +14,7 @@ public class LetterCombinationsofPhoneNumber {
 
     @Test
     public void test() {
-        System.out.println(Character.getNumericValue('7'));
+        System.out.println(letterCombinations("123"));
     }
 
     String[] pn = new String[]{"", "","abc","def","ghi","jkl","mno","pqrs","tuv","wxyz"};
