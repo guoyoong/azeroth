@@ -2,6 +2,8 @@ package com.leetcode.other;
 
 import org.junit.Test;
 
+import java.util.Arrays;
+
 /**
  * Created by guoyong1 on 2017/8/22.
  */
@@ -39,9 +41,24 @@ public class SingletonTest {
     }
 
     @Test
-    public void test(){
-        System.out.println(countAndSay(4));
+    public void test() throws InterruptedException {
+        System.out.println(ClassLoader.getSystemClassLoader());
+        new Thread(){
+            @Override
+            public void run() {
+                System.out.println(Thread.currentThread().getContextClassLoader());
+            }
+        }.start();
+
+        new Thread(){
+            @Override
+            public void run() {
+                System.out.println(Thread.currentThread().getContextClassLoader());
+            }
+        }.start();
+        Thread.sleep(1000);
     }
+
 
     public String countAndSay(int n) {
         if(n < 1)
